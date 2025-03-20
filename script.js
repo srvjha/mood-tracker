@@ -62,8 +62,18 @@ function renderCalendar() {
     const prenexIcons = document.querySelectorAll(".calendar-navigation span");
 
     const months = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
     ];
 
     const manipulate = () => {
@@ -74,7 +84,9 @@ function renderCalendar() {
         let lit = "";
 
         for (let i = dayone; i > 0; i--) {
-            lit += `<li class="inactive p-4 w-18 h-18 text-xl text-gray-400">${monthlastdate - i + 1}</li>`;
+            lit += `<li class="inactive p-4 w-18 h-18 text-xl text-gray-400">${
+                monthlastdate - i + 1
+            }</li>`;
         }
 
         for (let i = 1; i <= lastdate; i++) {
@@ -84,11 +96,16 @@ function renderCalendar() {
                 year === new Date().getFullYear()
                     ? "bg-blue-500 text-white p-4 font-semibold w-18 h-18 text-xl text-center  rounded-lg"
                     : "bg-black text-white p-4 hover:bg-gray-600 transition w-18 h-18 text-xl text-center duration-200 rounded-lg";
-            
-            const savedMoods = JSON.parse(localStorage.getItem("user_emoji_collections")) || [];
-            const emoji = savedMoods.find(m => 
-                new Date(m.currentDate).toDateString() === new Date(year, month, i).toDateString()
-            )?.emoji || "";
+
+            const savedMoods =
+                JSON.parse(localStorage.getItem("user_emoji_collections")) ||
+                [];
+            const emoji =
+                savedMoods.find(
+                    (m) =>
+                        new Date(m.currentDate).toDateString() ===
+                        new Date(year, month, i).toDateString(),
+                )?.emoji || "";
 
             lit += `<li class="${isToday} p-2 cursor-pointer">${i} ${emoji}</li>`;
         }
