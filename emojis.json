@@ -1,0 +1,15 @@
+[
+    { "name": "Smiling Face", "emoji": "😊" },
+    { "name": "Laughing Face", "emoji": "😂" },
+    { "name": "Heart Eyes", "emoji": "😍" },
+    { "name": "Fever", "emoji": "🤒" },
+    { "name": "Hyper Angry", "emoji": "🤬" },
+    { "name": "Sad Face", "emoji": "😢" },
+    { "name": "Crying Face", "emoji": "😭" },
+    { "name": "Angry Face", "emoji": "😡" },
+    { "name": "Sleeping Face", "emoji": "😴" },
+    { "name": "Cool Face", "emoji": "😎" },
+    { "name": "Wealthy", "emoji": "🤑" },
+    { "name": "Sneeze", "emoji": "🤧" }  
+
+  ]
